@@ -26,13 +26,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <EditText
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/search_bar"
+        android:tag="Search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        android:background="@android:color/holo_orange_light"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -40,10 +43,10 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/hero_recycler_view"
         android:layout_width="match_parent"
-        android:paddingLeft="12dp"
-        android:paddingRight="12dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

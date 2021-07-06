@@ -6,10 +6,11 @@ import android.widget.ProgressBar
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.killerinstinct.superheroapp.adapters.HeroAdapter
 import com.killerinstinct.superheroapp.data.HeroResponse
+import com.killerinstinct.superheroapp.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -17,12 +18,15 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private val viewModel: MainViewModel by viewModels()
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         var list = listOf<HeroResponse>()
+
 
 //        lifecycleScope.launchWhenStarted {
 //            list = viewModel._herolist.value!!
@@ -44,6 +48,7 @@ class MainActivity : AppCompatActivity() {
             }
             else
             {
+
                 findViewById<ProgressBar>(R.id.progress_bar).visibility = ProgressBar.INVISIBLE
                 setupRecyclerView(list)
             }
@@ -51,11 +56,10 @@ class MainActivity : AppCompatActivity() {
         setupRecyclerView(list)
     }
 
-    fun setupRecyclerView(list: List<HeroResponse>)
+    private fun setupRecyclerView(list: List<HeroResponse>)
     {
-        val recyclerView = findViewById<RecyclerView>(R.id.hero_recycler_view)
-        recyclerView.layoutManager = GridLayoutManager(this,2)
-        recyclerView.adapter = HeroAdapter(list)
+        binding.heroRecyclerView.layoutManager = GridLayoutManager(this,2)
+        binding.heroRecyclerView.adapter = HeroAdapter(list)
     }
 
 }

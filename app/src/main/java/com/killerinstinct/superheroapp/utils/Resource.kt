@@ -1,4 +1,4 @@
-package com.killerinstinct.superheroapp
+package com.killerinstinct.superheroapp.utils
 
 sealed class Resource<T>(val data: T?,val message: String?)
 {

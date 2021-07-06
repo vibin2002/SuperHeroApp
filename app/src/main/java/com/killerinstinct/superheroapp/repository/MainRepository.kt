@@ -1,7 +1,7 @@
-package com.killerinstinct.superheroapp.di
+package com.killerinstinct.superheroapp.repository
 
 import android.util.Log
-import com.killerinstinct.superheroapp.Resource
+import com.killerinstinct.superheroapp.utils.Resource
 import com.killerinstinct.superheroapp.data.HeroApi
 import com.killerinstinct.superheroapp.data.HeroResponse
 import javax.inject.Inject

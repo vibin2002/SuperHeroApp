@@ -1,14 +1,13 @@
 package com.killerinstinct.superheroapp
 
 import android.util.Log
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.killerinstinct.superheroapp.data.HeroResponse
-import com.killerinstinct.superheroapp.di.MainRepository
+import com.killerinstinct.superheroapp.repository.MainRepository
+import com.killerinstinct.superheroapp.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.scopes.ViewModelScoped
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
