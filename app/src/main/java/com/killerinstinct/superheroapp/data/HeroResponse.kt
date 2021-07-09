@@ -2,6 +2,7 @@ package com.killerinstinct.superheroapp.data
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class HeroResponse(
     val appearance: Appearance?,
@@ -13,4 +14,4 @@ data class HeroResponse(
     val powerstats: Powerstats?,
     val slug: String?,
     val work: Work?
-)
+): Serializable

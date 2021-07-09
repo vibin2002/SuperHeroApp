@@ -15,6 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:transitionName="imageTrans"
             android:id="@+id/hero_image"
             android:layout_width="120dp"
             android:layout_height="120dp"

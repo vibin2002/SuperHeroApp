@@ -1,7 +1,7 @@
 package com.killerinstinct.superheroapp.data
 
 
-import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Biography(
     val aliases: List<String>?,
@@ -11,4 +11,4 @@ data class Biography(
     val fullName: String?,
     val placeOfBirth: String?,
     val publisher: String?
-)
+): Serializable

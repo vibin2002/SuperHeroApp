@@ -2,6 +2,7 @@ package com.killerinstinct.superheroapp.data
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Powerstats(
     val combat: Int?,
@@ -10,4 +11,4 @@ data class Powerstats(
     val power: Int?,
     val speed: Int?,
     val strength: Int?
-)
+): Serializable
