@@ -8,6 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.killerinstinct.superheroapp.data.HeroResponse
 import com.killerinstinct.superheroapp.databinding.ActivityStatsBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 
 class StatsActivity : AppCompatActivity() {
@@ -42,12 +46,49 @@ class StatsActivity : AppCompatActivity() {
             tvHeight.text = hero.appearance?.height?.get(1).toString()
             tvWeight.text = hero.appearance?.weight?.get(1).toString()
 
-            pbCombat.progress = hero.powerstats?.combat ?: 0
-            pbDurability.progress = hero.powerstats?.durability ?: 0
-            pbIntelligence.progress = hero.powerstats?.intelligence ?: 0
-            pbPower.progress = hero.powerstats?.power ?: 0
-            pbSpeed.progress = hero.powerstats?.speed ?: 0
-            pbStrength.progress = hero.powerstats?.strength ?: 0
+            pbDurability.progress = 0
+            pbDurability.progress = 0
+            pbIntelligence.progress = 0
+            pbPower.progress = 0
+            pbSpeed.progress = 0
+            pbStrength.progress = 0
+
+            val stats = listOf(
+                hero.powerstats?.combat,
+                hero.powerstats?.durability,
+                hero.powerstats?.intelligence,
+                hero.powerstats?.power ,
+                hero.powerstats?.speed,
+                hero.powerstats?.strength,
+            )
+
+            CoroutineScope(Dispatchers.Main).launch {
+                for (i in 0..100)
+                {
+                    delay(5)
+                    if(stats[0]!! >= i)
+                        pbCombat.progress = i
+                    if(stats[1]!! >= i)
+                        pbDurability.progress = i
+                    if(stats[2]!! >= i)
+                        pbIntelligence.progress = i
+                    if(stats[3]!! >= i)
+                        pbPower.progress = i
+                    if(stats[4]!! >= i)
+                        pbSpeed.progress = i
+                    if(stats[5]!! >= i)
+                        pbStrength.progress = i
+                }
+
+            }
+
+
+
+//            pbDurability.progress = hero.powerstats?.durability ?: 0
+//            pbIntelligence.progress = hero.powerstats?.intelligence ?: 0
+//            pbPower.progress = hero.powerstats?.power ?: 0
+//            pbSpeed.progress = hero.powerstats?.speed ?: 0
+//            pbStrength.progress = hero.powerstats?.strength ?: 0
 
             "${hero.powerstats?.combat}".also { numCombat.text = it }
             "${hero.powerstats?.durability}".also { numDurability.text = it }
