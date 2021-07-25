@@ -24,20 +24,24 @@ class StatsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val hero = intent.getSerializableExtra("Hero") as HeroResponse
-        print("$hero qwerty")
         val palette = intent.getIntExtra("pallete",Color.RED)
-        val gd = GradientDrawable(
-            GradientDrawable.Orientation.TOP_BOTTOM, intArrayOf(-0xececed,palette,palette,palette)
-        )
-        window.statusBarColor = Color.BLACK
-        gd.cornerRadius = 0f
 
+
+        binding.consLayout.background = GradientDrawable(
+            GradientDrawable.Orientation.TOP_BOTTOM, intArrayOf(-0xececed,palette,palette,palette)
+        ).apply {  cornerRadius = 0f }
+
+        window.apply {
+            statusBarColor = Color.BLACK
+            enterTransition = Fade()
+        }
 
         Glide.with(this).load(hero.images!!.sm).into(binding.saHeroImage)
-        binding.consLayout.background = gd
 
+        setupTextViewsAndProgressBar(hero,palette)
+    }
 
-
+    fun setupTextViewsAndProgressBar(hero: HeroResponse,palette: Int){
         binding.apply {
 
             saHeroName.text= hero.name
@@ -82,14 +86,6 @@ class StatsActivity : AppCompatActivity() {
 
             }
 
-
-
-//            pbDurability.progress = hero.powerstats?.durability ?: 0
-//            pbIntelligence.progress = hero.powerstats?.intelligence ?: 0
-//            pbPower.progress = hero.powerstats?.power ?: 0
-//            pbSpeed.progress = hero.powerstats?.speed ?: 0
-//            pbStrength.progress = hero.powerstats?.strength ?: 0
-
             "${hero.powerstats?.combat}".also { numCombat.text = it }
             "${hero.powerstats?.durability}".also { numDurability.text = it }
             "${hero.powerstats?.intelligence}".also { numIntelligence.text = it }
@@ -98,8 +94,6 @@ class StatsActivity : AppCompatActivity() {
             "${hero.powerstats?.strength}".also { numStrength.text = it }
 
         }
-
-        window.enterTransition = Fade()
     }
 
 
