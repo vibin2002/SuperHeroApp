@@ -1,12 +1,9 @@
 package com.killerinstinct.superheroapp
 
-import android.content.res.ColorStateList
-import android.graphics.*
-import android.graphics.drawable.Drawable
+import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.transition.Fade
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.killerinstinct.superheroapp.data.HeroResponse
@@ -39,35 +36,25 @@ class StatsActivity : AppCompatActivity() {
 
         binding.apply {
 
-            Log.d( "ProgressDF",hero.powerstats.toString())
-
-            tempprog.progress = hero.powerstats?.combat ?: 0
-
             saHeroName.text= hero.name
             saHeroName.setTextColor(palette)
 
-            pbCombat.max = 100
-            pbCombat.progress = hero.powerstats?.combat ?: 10
-
-            pbDurability.max = 100
-            pbDurability.progress = hero.powerstats?.durability ?: 0
-
-            pbIntelligence.max = 100
-            pbIntelligence.progress = hero.powerstats?.intelligence ?: 0
-
-            pbPower.max = 100
-            pbPower.progress = hero.powerstats?.power ?: 0
-
-
-            pbSpeed.max = 100
-            pbSpeed.progress = hero.powerstats?.speed ?: 0
-
-            pbStrength.max = 100
-            pbStrength.progress = hero.powerstats?.strength ?: 0
-
-
             tvHeight.text = hero.appearance?.height?.get(1).toString()
             tvWeight.text = hero.appearance?.weight?.get(1).toString()
+
+            pbCombat.progress = hero.powerstats?.combat ?: 0
+            pbDurability.progress = hero.powerstats?.durability ?: 0
+            pbIntelligence.progress = hero.powerstats?.intelligence ?: 0
+            pbPower.progress = hero.powerstats?.power ?: 0
+            pbSpeed.progress = hero.powerstats?.speed ?: 0
+            pbStrength.progress = hero.powerstats?.strength ?: 0
+
+            "${hero.powerstats?.combat}".also { numCombat.text = it }
+            "${hero.powerstats?.durability}".also { numDurability.text = it }
+            "${hero.powerstats?.intelligence}".also { numIntelligence.text = it }
+            "${hero.powerstats?.power}".also { numPower.text = it }
+            "${hero.powerstats?.speed}".also { numSpeed.text = it }
+            "${hero.powerstats?.strength}".also { numStrength.text = it }
 
         }
 

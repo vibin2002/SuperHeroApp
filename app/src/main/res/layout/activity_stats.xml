@@ -95,13 +95,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sa_hero_name" />
 
-            <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tempprog"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout8"
@@ -119,7 +112,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="26dp"
                     android:layout_marginHorizontal="20dp"
-                    android:background="@drawable/custom_progress_bg"
+                    android:progressDrawable="@drawable/custom_progress_bg"
                     android:max="100"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -133,7 +126,7 @@
                     android:layout_marginHorizontal="30dp"
                     android:text="Combat"
                     android:id="@+id/tv_combat"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
 
@@ -145,7 +138,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="30dp"
                     android:text="12"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintRight_toRightOf="parent" />
@@ -168,7 +161,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="26dp"
                     android:layout_marginHorizontal="20dp"
-                    android:background="@drawable/custom_progress_bg"
+                    android:progressDrawable="@drawable/custom_progress_bg"
                     android:max="100"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -182,7 +175,7 @@
                     android:layout_marginHorizontal="30dp"
                     android:text="Durability"
                     android:id="@+id/tv_durability"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -193,7 +186,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="30dp"
                     android:text="12"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintRight_toRightOf="parent" />
@@ -216,7 +209,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="26dp"
                     android:layout_marginHorizontal="20dp"
-                    android:background="@drawable/custom_progress_bg"
+                    android:progressDrawable="@drawable/custom_progress_bg"
                     android:max="100"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -230,7 +223,7 @@
                     android:layout_marginHorizontal="30dp"
                     android:text="Intelligence"
                     android:id="@+id/tv_intelligence"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -241,7 +234,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="30dp"
                     android:text="12"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintRight_toRightOf="parent" />
@@ -263,7 +256,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="26dp"
                     android:layout_marginHorizontal="20dp"
-                    android:background="@drawable/custom_progress_bg"
+                    android:progressDrawable="@drawable/custom_progress_bg"
                     android:max="100"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -277,7 +270,7 @@
                     android:layout_marginHorizontal="30dp"
                     android:text="Power"
                     android:id="@+id/tv_power"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -288,7 +281,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="30dp"
                     android:text="12"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintRight_toRightOf="parent" />
@@ -310,7 +303,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="26dp"
                     android:layout_marginHorizontal="20dp"
-                    android:background="@drawable/custom_progress_bg"
+                    android:progressDrawable="@drawable/custom_progress_bg"
                     android:max="100"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -324,7 +317,7 @@
                     android:layout_marginHorizontal="30dp"
                     android:text="Speed"
                     android:id="@+id/tv_speed"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -335,7 +328,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="30dp"
                     android:text="12"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintRight_toRightOf="parent" />
@@ -358,7 +351,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="26dp"
                     android:layout_marginHorizontal="20dp"
-                    android:background="@drawable/custom_progress_bg"
+                    android:progressDrawable="@drawable/custom_progress_bg"
                     android:max="100"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -372,7 +365,7 @@
                     android:layout_marginHorizontal="30dp"
                     android:text="Strength"
                     android:id="@+id/tv_strength"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -382,7 +375,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="30dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:text="12"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
