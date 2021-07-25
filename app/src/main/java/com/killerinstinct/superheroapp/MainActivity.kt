@@ -66,8 +66,8 @@ class MainActivity : AppCompatActivity(), HeroAdapter.OnHeroItemClickListener {
             Bitmap.Config.ARGB_8888,
             true
         )
-        val x: Int? = Palette.from(bmp).generate().run {
-            dominantSwatch?.rgb
+        val x: Int = Palette.from(bmp).generate().run {
+            vibrantSwatch?.rgb
         } ?: Color.BLACK
 
         val activityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(
