@@ -1,15 +1,9 @@
 package com.killerinstinct.superheroapp.adapters
 
-import android.app.Activity
-import android.content.Intent
-import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.core.app.ActivityOptionsCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.killerinstinct.superheroapp.StatsActivity
 import com.killerinstinct.superheroapp.data.HeroResponse
 import com.killerinstinct.superheroapp.databinding.HeroCardBinding
 
